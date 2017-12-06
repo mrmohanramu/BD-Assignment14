@@ -70,32 +70,34 @@ object Assignment14T1 {
         var operation = scala.io.StdIn.readLine().toString()
         operation match {
           case "+" => {
-            println("********* Rational Calculations Results *********")
-            calc.addition(n1, d1, n2, d2)
-            println("********* Whole number Calculations Results *********")
-            calc.addition(n1, n2)
+            println("********* Rational Calculations Results: (n1/d1)+(n2/d2) *********")
+            calc.addition(n1, d1, n2, d2)  //(n1/d1)+(n2/d2)
+            println("********* Whole number Calculations Results: (n1+n2) *********")
+            calc.addition(n1, n2)  //n1+n2
           }
           case "-" => {
-            println("********* Rational Calculations Results *********")
-            calc.substraction(n1, d1, n2, d2)
-            println("********* Whole number Calculations Results *********")
-            calc.substraction(n1, n2)
+            println("********* Rational Calculations Results: (n1/d1)-(n2/d2) *********")
+            calc.substraction(n1, d1, n2, d2)  //(n1/d1)-(n2/d2)
+            println("********* Whole number Calculations Results: (n1-n2) *********")
+            calc.substraction(n1, n2)  // n1-n2
           }
           case "*" => {
-            println("********* Rational Calculations Results *********")
-            calc.multiplication(n1, d1, n2, d2)
-            println("********* Whole number Calculations Results *********")
+            println("********* Rational Calculations Results: (n1/d1)*(n2/d2) *********")
+            calc.multiplication(n1, d1, n2, d2)  //(n1/d1)*(n2/d2)
+            println("********* Whole number Calculations Results: (n1*n2) *********")
             calc.multiplication(n1, n2)
           }
           case "/" => {
-            println("********* Rational Calculations Results *********")
+            println("********* Rational Calculations Results: (n1/d1)/(n2/d2) *********")
             calc.division(n1, d1, n2, d2)
-            println("********* Whole number Calculations Results *********")
+            println("********* Whole number Calculations Results: (n1/n2) *********")
             calc.division(n1, n2)
           }
         }
+        println("------------------------------------------")
         println("Perform calculations again ? Press (y/n)")
         again = scala.io.StdIn.readChar()
+        println("------------------------------------------")
       }
     } catch {
       case ex: Exception => {
