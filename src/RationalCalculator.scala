@@ -59,7 +59,7 @@ object Assignment14T1 {
   def main(args: Array[String]): Unit = {
     var calc = new RationalCalculator
     try {
-      println("Enter first numbers:")
+      println("Enter numbers:")
       var n1: Int = scala.io.StdIn.readLine().toInt
       var n2: Int = scala.io.StdIn.readLine().toInt
       var d1: Int = scala.io.StdIn.readLine().toInt
